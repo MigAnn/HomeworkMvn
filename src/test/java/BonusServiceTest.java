@@ -8,11 +8,11 @@ import static org.junit.jupiter.api.Assertions.*;
 public class BonusServiceTest {
     @ParameterizedTest
     @CsvFileSource(resources = "/data.csv")
-    public void test(int amount, boolean isRegistered, int expected){
-        BonusService service= new BonusService();
+    public void test(int amount, boolean isRegistered, int expected) {
+        BonusService service = new BonusService();
 
-                long actual = service.calculate(amount, isRegistered);
+        long actual = service.calculate(amount, isRegistered);
 
-        Assertions.assertEquals(expected,actual);
+        Assertions.assertEquals(expected, actual);
     }
 }
